@@ -1,0 +1,51 @@
+.dropdown{
+    width: 20%;
+    background: #fafafa;
+    color: #737373;
+    transition: all 0.5s;
+    
+}
+.dropdown.open{
+    width: 5%;
+}
+.dropdown button{
+    width: 90%;
+    background: #00754a;
+    margin: 0 auto;
+    border: 0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+.dropdown li,.dropdown div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem;
+    font-size: 14px;
+    padding: 8px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    transition: all 0.5s;
+}
+.dropdown.open li,.dropdown.open div{
+    justify-content: center;
+}
+.dropdown.open li div{
+    display: none;
+}
+.dropdown li div{
+    overflow:hidden;
+
+}
+.dropdown li svg, .dropdown div svg{
+    font-size: 25px;
+    cursor: pointer;
+}
+.dropdown li:hover{
+    background: rgba(128,128,128,0.1);
+}
+.open-button{
+    z-index: 99 !important;
+}

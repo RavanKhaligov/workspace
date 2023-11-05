@@ -1,0 +1,70 @@
+.center{
+    height: 90vh;
+    display: grid;
+    place-items: center;
+  }
+  .block{
+    display: block;
+  }
+  .none{
+    display: none;
+  }
+  .account{
+    width: 40%;
+    background-color: #fff;
+    color: #333;
+    border-radius: 15px;
+    padding: 40px 50px;
+    margin: 20px 0;
+  }
+  .account p{
+    color: red;
+    font-size: 13px;
+  }
+  .account .flex {
+    display: flex;
+    margin: 30px 0;
+    border-bottom: 1px solid #ccc;
+    width: 70%;
+    justify-content: space-between;
+  
+  }
+  .account input{
+    padding: 10px;
+  }
+  .account input::placeholder,.account input:focus{
+    text-align: left;
+  }
+  .account .eye{
+    background: inherit;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  .account .button{
+    border: 1px solid #cecece;
+    width: 30%;
+    padding: 7px 0;
+    border-radius:8px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .account .button.active{
+    color: #ffffff;
+    background-color:#202142;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  .account .button.active:hover{
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+  input {
+    flex-grow: 2;
+    border: none;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    outline: none;
+  }

@@ -1,0 +1,43 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color:white;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+.left{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 5px;
+}
+.menu-toggle{
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #202142;
+    margin: 6px 0;
+}
+
+h2{
+    color: #202142;
+}
+.input-box{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 10px;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+.input-box input{
+    outline: none;
+    background: inherit;
+    border: 0;
+}
