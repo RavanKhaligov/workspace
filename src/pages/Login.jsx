@@ -12,16 +12,25 @@ import DocumentsContext from '../context/DocumentsContext'
         const handleChange = e =>{
             setData({...data,[e.target.name]:e.target.value})
         }
-        const sendData = () =>{
-            if(data.username === "React" && data.password === "123456"){
+        const sendData = async  () =>{
+            try{
+                const requestOptions  = {
+                    method: 'POST',
+                    headers:{'Content-Type':'application/json'},
+                    body:JSON.stringify(data)
+                }
+                const response = await fetch("https://1curd3ms.trials.alfresco.com/alfresco/api/-default-/public/authentication/versions/1/tickets",requestOptions)
+                const r = await response.json()
                 navigate("/personal-files")
                 setActive(false)
                 setData({username:'',password:''})
                 localStorage.setItem("login", true)
 
-            }else{
+            }catch (err){
                 setActive(true)
             }
+                
+
         }
         useEffect(() =>{
             JSON.parse(localStorage.getItem("login")) && navigate('/personal-files')
@@ -37,7 +46,7 @@ import DocumentsContext from '../context/DocumentsContext'
                 <div className='flex'>
                     <input 
                         type="text"
-                        name='username'
+                        name='userId'
                         placeholder='Email' 
                         value={data.name} 
                         onChange={handleChange}

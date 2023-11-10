@@ -3,7 +3,7 @@ const DocumentsContext = createContext()
 
 export const DocumentProvider = ({children}) =>{
     const [isOpen,setIsOpen] = useState(false)
-    const [data,setData] = useState({username:'',password:''})
+    const [data,setData] = useState({userId:'',password:''})
     const [folderData,setFolderData] = useState({name:'',title:'',description:'',type:'folder'})
     const [openFolderModal,setOpenFolderModal] = useState(false)
     const [nameError,setNameError] = useState(false)
