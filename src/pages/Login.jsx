@@ -20,11 +20,15 @@ import DocumentsContext from '../context/DocumentsContext'
                     body:JSON.stringify(data)
                 }
                 const response = await fetch("https://1curd3ms.trials.alfresco.com/alfresco/api/-default-/public/authentication/versions/1/tickets",requestOptions)
-                const r = await response.json()
-                navigate("/personal-files")
-                setActive(false)
-                setData({username:'',password:''})
-                localStorage.setItem("login", true)
+                if(response.ok){
+                    navigate("/personal-files")
+                    setActive(false)
+                    setData({username:'',password:''})
+                    localStorage.setItem("login", true)
+                }
+                else{
+                    setActive(true)
+                }
 
             }catch (err){
                 setActive(true)

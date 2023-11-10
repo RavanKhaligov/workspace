@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React from 'react'
 import { AiFillFile, AiFillFolder } from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom'
 
